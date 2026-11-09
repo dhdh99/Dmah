@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111116">
+  <meta name="description" content="평온한 도시의 이면, 설명되지 않는 현상과 모뉴먼트의 기록. DMAH 디마 세계관 아카이브.">
+  <title>DMAH — 디마</title>
+  <link rel="preload" as="image" href="assets/hero.webp" fetchpriority="high">
+  <link rel="stylesheet" href="styles.css">
+  <script src="content.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="#top" aria-label="DMAH 홈">
+        <span class="brand-mark">DMAH</span>
+        <span class="brand-caption">디마 세계관 기록보관소</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="메뉴 열기">
+        <span></span><span></span>
+      </button>
+      <nav class="nav-links" id="site-nav" aria-label="주요 메뉴">
+        <a href="#world">현상</a>
+        <a href="#monuments">모뉴먼트</a>
+        <a href="#mm">조직 MM</a>
+        <a href="#characters">인물</a>
+        <a href="#chronicle">연대기</a>
+        <a class="nav-record" href="#archive">기록 열람 <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <img class="hero-image" id="hero-image" src="assets/hero.webp" alt="밤의 신주쿠 거리. 밝은 간판 사이로 깊은 어둠이 이어진다.">
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow hero-eyebrow" id="hero-eyebrow"></p>
+          <h1 id="hero-title"></h1>
+          <p class="hero-lead" id="hero-lead"></p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#world">기록을 열람한다 <span aria-hidden="true">↘</span></a>
+            <a class="button button-quiet" href="#archive">봉인 기록 보기</a>
+          </div>
+          <div class="hero-meta" id="hero-meta" aria-label="세계관 정보"></div>
+        </div>
+        <aside class="hero-quote" aria-label="기록 인용문">
+          <span class="quote-mark" aria-hidden="true">“</span>
+          <p id="hero-quote"></p>
+          <span class="quote-source">DMAH / 기록 00</span>
+        </aside>
+      </div>
+      <a class="hero-scroll" href="#world"><span>SCROLL TO ENTER</span><i aria-hidden="true"></i></a>
+      <p class="photo-credit hero-credit" id="hero-credit"></p>
+    </section>
+
+    <section class="intro section-paper" aria-labelledby="intro-title">
+      <div class="container intro-grid">
+        <div class="intro-heading">
+          <p class="eyebrow eyebrow-dark" id="intro-eyebrow"></p>
+          <h2 id="intro-title"></h2>
+        </div>
+        <div class="intro-copy">
+          <p id="intro-text"></p>
+          <div class="intro-note"><span class="note-sigil" aria-hidden="true">✳</span><p id="intro-note"></p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="world" aria-labelledby="world-title">
+      <div class="container">
+        <div class="section-heading section-heading-split">
+          <div><p class="eyebrow" id="world-eyebrow"></p><h2 id="world-title"></h2></div>
+          <p class="section-intro" id="world-intro"></p>
+        </div>
+        <div class="world-grid" id="world-cards"></div>
+      </div>
+    </section>
+
+    <section class="section monument-section" id="monuments" aria-labelledby="monument-title">
+      <div class="container">
+        <div class="section-heading section-heading-split">
+          <div><p class="eyebrow eyebrow-dark" id="monument-eyebrow"></p><h2 id="monument-title"></h2></div>
+          <p class="section-intro section-intro-dark" id="monument-intro"></p>
+        </div>
+        <div class="monument-grid" id="monuments-list"></div>
+        <p class="system-footnote"><span aria-hidden="true">*</span> モニュメントの情報はMMにより厳重に 관리된다.</p>
+      </div>
+    </section>
+
+    <section class="section mm-section" id="mm" aria-labelledby="organization-title">
+      <div class="container mm-layout">
+        <div class="mm-intro">
+          <p class="eyebrow" id="organization-eyebrow"></p>
+          <div class="mm-monogram" id="organization-mark" aria-hidden="true"></div>
+          <h2 id="organization-title"></h2>
+          <p class="mm-lead" id="organization-lead"></p>
+          <p class="mm-note" id="organization-note"></p>
+        </div>
+        <div class="mm-files">
+          <article class="mm-file mm-file-public">
+            <p class="file-label"><span class="status-dot"></span> OFFICIAL STATEMENT</p>
+            <h3>공식 명분</h3>
+            <p id="organization-public-goal"></p>
+          </article>
+          <article class="mm-file mm-file-sealed">
+            <p class="file-label"><span class="status-dot"></span> INTERNAL / RESTRICTED</p>
+            <h3>내부 기록</h3>
+            <p id="organization-hidden-goal"></p>
+            <span class="seal-stamp" aria-label="기밀">기밀</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-paper" id="characters" aria-labelledby="characters-title">
+      <div class="container">
+        <div class="section-heading section-heading-split">
+          <div><p class="eyebrow eyebrow-dark" id="characters-eyebrow"></p><h2 id="characters-title"></h2></div>
+          <p class="section-intro section-intro-dark" id="characters-intro"></p>
+        </div>
+        <div class="character-grid" id="characters-list"></div>
+      </div>
+    </section>
+
+    <section class="section chronicle-section" id="chronicle" aria-labelledby="timeline-title">
+      <div class="container chronicle-layout">
+        <div class="chronicle-intro">
+          <p class="eyebrow" id="timeline-eyebrow"></p>
+          <h2 id="timeline-title"></h2>
+          <p id="timeline-intro"></p>
+          <div class="chronicle-seal" aria-hidden="true">DMAH<br><span>ARCHIVE</span></div>
+        </div>
+        <ol class="timeline" id="timeline-list" aria-label="주요 연표"></ol>
+      </div>
+    </section>
+
+    <section class="archive-section" id="archive" aria-labelledby="archive-title">
+      <div class="archive-glow" aria-hidden="true"></div>
+      <div class="container archive-layout">
+        <div class="archive-heading">
+          <p class="eyebrow" id="archive-eyebrow"></p>
+          <p class="archive-type" id="archive-type"></p>
+          <h2 id="archive-title"></h2>
+          <p class="archive-text" id="archive-text"></p>
+          <a class="button button-primary" href="#top">첫 화면으로 <span aria-hidden="true">↑</span></a>
+        </div>
+        <figure class="archive-quote-card">
+          <div class="archive-stamp">RESTRICTED<br><span>FILE / 00-NUKE</span></div>
+          <blockquote id="archive-quote"></blockquote>
+          <figcaption id="archive-attribution"></figcaption>
+          <div class="archive-lines" aria-hidden="true"></div>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <div><a class="footer-brand" href="#top">DMAH</a><p id="footer-note"></p></div>
+      <div class="footer-credit"><span>HERO IMAGE</span><a id="photo-credit-link" href="#" target="_blank" rel="noopener noreferrer"></a></div>
+    </div>
+    <div class="container footer-bottom"><span>WORLD ARCHIVE · DMAH</span><a href="#top">TOP ↑</a></div>
+  </footer>
+</body>
+</html>
